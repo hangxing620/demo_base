@@ -4,7 +4,7 @@
   "description": "travis ci test",
   "main": "index.js",
   "scripts": {
-    "test": "node app.j"
+    "test": "node app.js"
   },
   "repository": {
     "type": "git",
