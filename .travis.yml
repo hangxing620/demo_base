@@ -4,15 +4,13 @@ node_js:
 branches:
   only:
   - master
-
 before_install:
 - openssl aes-256-cbc -K $encrypted_862bac004353_key -iv $encrypted_862bac004353_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+  -in travis_demo.enc -out ~/.ssh/travis_demo -d
 
-
-- chmod 600 ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/travis_demo
 - eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
+- ssh-add ~/.ssh/travis_demo
 - cp .travis/ssh_config ~/.ssh/config
 
-after_script: -scp -o StrictHostKeyChecking=no app.js root@123.207.233.35:/home/www/ceshi
+after_script: -scp -o StrictHostKeyChecking=no app.js root@47.93.58.173:/home/www/ceshi

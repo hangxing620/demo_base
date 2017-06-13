@@ -1,5 +1,5 @@
-Host 123.207.233.35
+Host 47.93.58.173
 User root
 StrictHostKeyChecking no
-IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/travis_demo
 IdentitiesOnly yes
