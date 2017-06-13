@@ -5,7 +5,7 @@ branches:
   only:
   - master
 after_script: -scp -o StrictHostKeyChecking=no app.js root@123.207.233.35:/home/www/ceshi
-dd:
+before_install:
 - openssl aes-256-cbc -K $encrypted_e16011055c45_key -iv $encrypted_e16011055c45_iv
   -in id_rsa.enc -out id_rsa -d
 
